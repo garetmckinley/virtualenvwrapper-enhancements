@@ -11,3 +11,5 @@ pip freeze > project/requirements.txt
 cd project
 git init
 echo "# $proj_name" > README.md
+echo ".DS_Store" >> .gitignore
+echo "*.pyc" >> .gitignore
