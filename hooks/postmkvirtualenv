@@ -1,0 +1,13 @@
+#!/bin/bash
+# This hook is sourced after a new virtualenv is activated.
+
+proj_name=${VIRTUAL_ENV##*/}
+
+mkdir -p public
+mkdir -p logs
+mkdir -p project
+touch project/README.md
+pip freeze > project/requirements.txt
+cd project
+git init
+echo "# $proj_name" > README.md
