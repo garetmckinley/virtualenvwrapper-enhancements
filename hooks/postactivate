@@ -14,3 +14,8 @@ if [ -d ~/sites/env/$proj_name/project ]; then
 else
   cd ~/sites/env/$proj_name
 fi
+
+# allow the installation of gems into your env
+export GEM_HOME="$VIRTUAL_ENV/gems"
+export GEM_PATH=""
+export PATH=$PATH:"$GEM_HOME/bin"
