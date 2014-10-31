@@ -6,6 +6,7 @@ proj_name=${VIRTUAL_ENV##*/}
 mkdir -p public
 mkdir -p logs
 mkdir -p project
+mkdir -p gems
 touch project/README.md
 pip freeze > project/requirements.txt
 cd project
